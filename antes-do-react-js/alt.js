@@ -136,15 +136,38 @@ const array = [1, 2, 3, 4, 5, 'José'];
 // .then/.catch
 
 
-fetch('https://api.github.com/users/jjosebastos')
-    .then(response => {
-        response.text().then( body => {
-            console.log(body)
-        })
-    })
-    .catch(err =>{
-        console.log(err)
-    })
+// fetch('adasd')
+//     .then (response => {
+//         return response.json();
+//     })
+//     .then (body => {
+//         console.log(body)
+//     })
+//     .catch(err =>{
+//         console.log(err)
+//     })
+//     .finally(() => {
+//        console.log('deu') 
+//     })
+
+
+// funções async
+// async function buscaDadosGit(){
+//     try{
+//         const response = await fetch('https://api.github.com/users/jjosebastos');
+//         const body  = await response.json();
+
+//         return body.login;
+
+//     } catch (err){
+//         console.log(err);
+//     } 
+
+// }
+
+// buscaDadosGit().then(login =>{
+//     console.log(login);
+// });
 
 // somaDoisNumeros(5,5)
 //     .then(soma => {
@@ -155,4 +178,18 @@ fetch('https://api.github.com/users/jjosebastos')
 //     })
 
 
-document.body.innerText = message;
+const somaDoisNumeros = (a, b) => {
+    return new Promise ((resolve,reject) =>{
+        setTimeout(() => {
+            reject(a+b);
+        }, 2000);
+    })
+}
+
+somaDoisNumeros ()
+.then (soma => {
+    document.body.innerText = soma
+})
+.catch (err => {
+    console.log(err);
+})
