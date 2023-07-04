@@ -115,3 +115,13 @@ div{
     border: medium dashed green;
 }
 ```
+
+### outline 
+- difere em 4 sentidos
+    - não modifica o tamanho da caixa
+    - mais usado pelo leitor de acessibilidade
+
+```css
+div {
+    outline: yellow 4px solid;
+}
