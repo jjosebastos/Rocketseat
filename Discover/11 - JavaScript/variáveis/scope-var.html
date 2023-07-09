@@ -1,0 +1,20 @@
+<script>
+    // var é glocbal e também local
+    // hoisting (por baixo dos panos o var é elevado como uma variável global porém sem o seu valor)
+    // console.log('> existe x antes do bloco', x);
+
+    // {
+    //     var x = 0
+    // }
+
+    // console.log('> existe x depois do bloco? ', x)
+    const y = 0
+    console.log('> existe y antes do bloco? ', y)
+
+    {
+        const y = 1
+
+        console.log('> existe y dentro do bloco?', y)
+    }
+    console.log('> existe y depois do bloco?', y)
+</script>
