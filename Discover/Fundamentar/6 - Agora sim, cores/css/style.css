@@ -1,0 +1,20 @@
+* {margin: 0;}
+
+main {
+    color: rgb(0,0,0,0.5);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+    border: 6px dashed red ;
+    background-color: rgba(0, 255, 1, 0.5);
+    background-image: url(../images/grommash.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-origin: border-box;
+    background-clip: border-box;
+    background-attachment: fixed;
+
+    background: rgba(0, 255, 1, 0.5) url(../images/grommash.jpg) no-repeat contain content-box content-box fixed;
+    background: linear-gradient(45deg,red,yellow);
+    background: radial-gradient(white,green,red);
+    background: radial-gradient(rgba(255,255,255,0),rgba(255, 0, 0, 0.2));
+}
